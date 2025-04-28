@@ -1,4 +1,6 @@
 import React from "react";
+import { FaGithub } from "react-icons/fa6";
+import { FaLinkedinIn } from "react-icons/fa";
 
 const Footer: React.FC = () => {
   return (
@@ -7,22 +9,22 @@ const Footer: React.FC = () => {
         <p className="text-sm">
           &copy; {new Date().getFullYear()} Image Enhancer. All rights reserved.
         </p>
-        <div className="flex gap-4 mt-2 md:mt-0">
+        <div className="flex gap-4 items-center mt-2 md:mt-0">
           <a
-            href="#"
-            className="hover:text-white transition-colors text-sm"
+            href="https://github.com/Vishesh-21/ClarityBoost-Image-Enhancer"
+            className="hover:text-black text-gray-500 hover:-translate-y-1 transition-all duration-200 text-sm"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Privacy Policy
+            <FaGithub className="w-6 h-6" />
           </a>
           <a
-            href="#"
-            className="hover:text-white transition-colors text-sm"
+            href="https://www.linkedin.com/in/vishesh-verma-35b31b279/"
+            className="hover:text-blue-500 text-gray-500 hover:-translate-y-1 transition-all duration-200 text-sm"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Terms of Service
+            <FaLinkedinIn className="w-6 h-6" />
           </a>
         </div>
       </div>
