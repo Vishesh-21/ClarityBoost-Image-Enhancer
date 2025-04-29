@@ -27,7 +27,7 @@ export const ImagePreview = ({
             className="w-full h-full object-cover"
           />
           {!uploadImage && (
-            <h1 className="absolute z-10 text-black top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-2xl font-bold opacity-50">
+            <h1 className="absolute z-10 text-black top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-2xl font-bold opacity-50 whitespace-nowrap">
               Please Upload an Image
             </h1>
           )}
@@ -48,7 +48,7 @@ export const ImagePreview = ({
           />
           {!loading && !enhancedImage && (
             <h1 className="absolute z-10 text-black top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-2xl font-bold opacity-50 whitespace-nowrap">
-              Upload an Image to Enhance.
+              No image to preview.
             </h1>
           )}
           {loading && (

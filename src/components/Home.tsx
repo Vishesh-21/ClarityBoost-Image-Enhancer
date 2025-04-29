@@ -26,7 +26,7 @@ export const Home = () => {
         setLoading(false);
       }
     } else {
-      console.log("Please Upload an image to enhance...");
+      alert("Please Upload an image to enhance...");
     }
   };
 
