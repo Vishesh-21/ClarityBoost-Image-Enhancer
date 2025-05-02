@@ -12,21 +12,33 @@ export const Home = () => {
   const uploadHandler = async (file: File | null): Promise<void> => {
     if (file) {
       setUploadImage(URL.createObjectURL(file));
-      // setLoading(true);
-      // try {
-      //   const enhanceImageUrl = await enhanceImageFunction(file);
-      //   setEnhancedImage(enhanceImageUrl);
-      // } catch (error) {
-      //   if (error instanceof Error) {
-      //     console.log("Error : ", error.message);
-      //   } else {
-      //     console.log("An unknown error occurred");
-      //   }
-      // } finally {
-      //   setLoading(false);
-      // }
+      setLoading(true);
+      try {
+        const enhanceImageUrl = await enhanceImageFunction(file);
+        setEnhancedImage(enhanceImageUrl);
+      } catch (error) {
+        if (error instanceof Error) {
+          console.log("Error : ", error.message);
+        } else {
+          console.log("An unknown error occurred");
+        }
+      } finally {
+        setLoading(false);
+      }
     } else {
       alert("Please Upload an image to enhance...");
+    }
+  };
+
+  // function to download the enhanced image
+  const downloadImage = () => {
+    if (enhancedImage) {
+      const link = document.createElement("a");
+      link.href = enhancedImage;
+      link.download = "enhanced_image.jpg";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
     }
   };
 
@@ -40,6 +52,7 @@ export const Home = () => {
         loading={loading}
         uploadImage={uploadImage}
         enhancedImage={enhancedImage}
+        downloadImage={downloadImage}
       />
     </div>
   );
