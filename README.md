@@ -25,26 +25,31 @@ ClarityBoost is a web application designed to enhance image quality using the po
 ## 📦 Installation
 
 1. Clone the repository:
-   
+
    git clone https://github.com/Vishesh-21/ClarityBoost-Image-Enhancer
    cd ClarityBoost
 
 2. Install dependencies:
 
-    npm install
+   npm install
 
 3. Create a .env file and add your PicWish API key:
 
-    VITE_VITE_PICWISH_API_KEY = "Your api key"
+   VITE_VITE_PICWISH_API_KEY = "Your api key"
 
 4. Start the development server:
 
-    npm run dev
+   npm run dev
 
 ## 🔐 API Key
 
 To get a PicWish API key, visit https://picwish.com/api and sign up. You will need this key to use the enhancer functionality.
 
+---
+
+## ScreenShot
+
+![Image_enhancer_screenshot](public/image_enhancer.png)
 
 ## 🙌 Acknowledgements
 
@@ -54,4 +59,3 @@ OpenAI for helping brainstorm the structure 😄
 ---
 
 ✨ Improve clarity. Boost quality. Welcome to ClarityBoost.
-

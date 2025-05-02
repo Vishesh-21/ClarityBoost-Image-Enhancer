@@ -63,7 +63,7 @@ export const ImagePreview = ({
             </h1>
           )}
 
-          {enhancedImage && (
+          {enhancedImage && !loading && (
             <button
               className="bg-red-500 text-white rounded-md px-3 py-3 cursor-pointer hover:bg-red-600 absolute top-2 right-2 flex items-center gap-2"
               onClick={downloadImage}
